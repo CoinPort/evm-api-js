@@ -6,8 +6,9 @@ const path = require('path');
 const app = express();
 app.use(express.json());
 
-const provider = new ethers.JsonRpcProvider('http://geth:8545');
-const KEYSTORE_DIR = path.join(__dirname, 'keystores');
+// const provider = new ethers.JsonRpcProvider('http://geth:8545');
+const provider = new ethers.JsonRpcProvider('https://dry-wispy-gas.quiknode.pro');
+const KEYSTORE_DIR = path.join(__dirname, '/opt/keystores');
 
 function getUTCFileName(address) {
   const now = new Date();
