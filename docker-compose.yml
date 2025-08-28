@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  eth-tool:
+    build: .
+    container_name: eth-tool
+    ports:
+      - "4000:3000" 
+    volumes:
+      - /home/app/block-data/ethereum/keystore:/app/keystores
+    restart: unless-stopped
